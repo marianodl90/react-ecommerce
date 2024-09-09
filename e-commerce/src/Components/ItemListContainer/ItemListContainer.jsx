@@ -1,4 +1,5 @@
-import { getProductsByCategory, getProducts } from "../asyncMock"
+import  getProductsByCategory from "../asyncMock"
+import getProducts from "../asyncMock"
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
@@ -10,15 +11,19 @@ const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
 
     const {categoryId} = useParams()
+    
 
     useEffect(() => {
 
+        const asyncFunc = categoryId ? getProductsByCategory : getProducts
+        
         const filterItems = (prod) => {
-            const filterProd = prod.filter(pr => pr.category == categoryId)
+            const filterProd = prod.filter(pr => pr.category === categoryId)
             setProducts(filterProd)
+           
         }
 
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts
+    
 
         asyncFunc(categoryId)
         .then(response => {  

@@ -1,3 +1,4 @@
+
 const productos = [
     {
       id: 1,
@@ -103,18 +104,20 @@ const productos = [
 
   export default getProducts
   
-  export const getProductById = (productId) => {
-      return new Promise ((resolve) => {
-        setTimeout(() => {
-          resolve(productos.find((prod) => prod.id === productId))
-        }, 500)
-      })
-  }
 
-  export const getProductByCategory = (productCategory) => {
+export const getProductById = (productId) => {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          const product = productos.find((prod) => prod.id === productId)
+          resolve(product)
+      }, 500)
+  })
+}
+
+  export const getProductByCategory = (categoryId) => {
     return new Promise ((resolve) => {
       setTimeout(() => {
-        resolve(productos.find((prod) => prod.category === productCategory))
+        resolve(productos.filter((prod) => prod.category === categoryId))
       }, 500)
     })
 }
