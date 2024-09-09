@@ -1,0 +1,13 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.controls {
+    display: flex;
+    column-gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
