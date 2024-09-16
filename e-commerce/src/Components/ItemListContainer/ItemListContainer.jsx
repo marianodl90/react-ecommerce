@@ -1,3 +1,84 @@
+
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
+import getProducts from "../asyncMock"
+import { useParams } from "react-router-dom"
+
+function ItemListContainer () {
+
+    const [items, setItems] = useState([])
+    const {categoryId} = useParams()
+
+    useEffect(() => {
+        const filterItems = (products) => {
+            const filterProducts = products.filter((prod)  => prod.category === categoryId)
+            setItems(filterProducts)
+        }
+        getProducts().then(res => {
+           if(!categoryId){setItems(res)
+        } else{
+            filterItems(res)
+        }
+        })
+    }, [categoryId])
+
+    return (
+        <ItemList items={items}/>
+    )
+
+}
+
+
+export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 import  getProductsByCategory from "../asyncMock"
 import getProducts from "../asyncMock"
 import { useState, useEffect } from "react"
@@ -47,3 +128,4 @@ const ItemListContainer = ({ greeting }) => {
 }
 
 export default ItemListContainer
+*/
