@@ -12,20 +12,3 @@ const ItemList = ({items}) => {
 export default ItemList
 
 
-
-/*
-
-import './ItemList.css'
-import Item from "../Item/Item"
-
-const ItemList = ({products}) => {
-
-    return (
-        <div className="ListGroup">
-            {products.map((prod) => <Item key={prod.id} {...prod}></Item>)}
-        </div>
-    )
-}
-
-export default ItemList
-*/

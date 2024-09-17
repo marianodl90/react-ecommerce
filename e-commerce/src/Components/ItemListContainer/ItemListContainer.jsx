@@ -11,7 +11,7 @@ function ItemListContainer () {
 
     useEffect(() => {
         const filterItems = (products) => {
-            const filterProducts = products.filter((prod)  => prod.category === categoryId)
+            const filterProducts = products.filter((prod)  => prod.category.toLowerCase() === categoryId)
             setItems(filterProducts)
         }
         getProducts().then(res => {
