@@ -1,10 +1,10 @@
 
-
 import { Link } from "react-router-dom"
 import { CartContext } from "../../Context/CartContext"
 import { useState, useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
+import {GridLoader} from "react-spinners"
 
 const ItemDetail = ({ product }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
@@ -20,7 +20,7 @@ const ItemDetail = ({ product }) => {
         addItem(item, quantity)
     }
 
-    if (!product) return <p>Loading...</p>
+    if (!product) return <GridLoader />
 
     return (
         <article className="CardItem">
@@ -49,3 +49,5 @@ const ItemDetail = ({ product }) => {
 }
 
 export default ItemDetail
+
+

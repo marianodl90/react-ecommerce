@@ -3,10 +3,13 @@ import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
 import getProducts from "../asyncMock"
 import { useParams } from "react-router-dom"
+import {GridLoader} from "react-spinners"
 
 function ItemListContainer () {
 
     const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(true)
+
     const {categoryId} = useParams()
 
     useEffect(() => {
@@ -16,12 +19,17 @@ function ItemListContainer () {
         }
         getProducts().then(res => {
            if(!categoryId){setItems(res)
+            setLoading(false)
         } else{
             filterItems(res)
+            
         }
         })
     }, [categoryId])
 
+    if(loading){
+        return <GridLoader />
+    }
     return (
         <ItemList items={items}/>
     )
