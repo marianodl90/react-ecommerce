@@ -14,7 +14,7 @@ const Item = ({ id, name, price, category, img, stock }) => {
                 <img src={img} alt={name} className="ItemImg" />
             </picture>
             <section>
-                <p className="Info">Precio: {price}</p>
+                <p className="Info">Precio: ${price}</p>
             </section>
             <section>
                 <p className="Info">Stock: {stock}</p>
@@ -25,7 +25,6 @@ const Item = ({ id, name, price, category, img, stock }) => {
             <footer className="ItemFooter">
                 <Link to={`/product/${id}`} className='Option'>Ver detalle</Link>
             </footer>
-            <ItemCount stock={stock} initial={1} onAdd={(quantity) => console.log("Cantidad agregada:", quantity)} />
         </article>
     )
 }
@@ -33,4 +32,5 @@ const Item = ({ id, name, price, category, img, stock }) => {
 export default Item
 
 
+/*<ItemCount stock={stock} initial={1} onAdd={(quantity) => console.log("Cantidad agregada:", quantity)} />*/
 

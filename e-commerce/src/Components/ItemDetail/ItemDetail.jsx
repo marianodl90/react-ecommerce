@@ -4,43 +4,45 @@ import { CartContext } from "../../Context/CartContext"
 import { useState, useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
-import {GridLoader} from "react-spinners"
+import { GridLoader } from "react-spinners"
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
     const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
+
+
         const item = {
-            id: product.id,
-            name: product.name,
-            price: product.price
+           id, name, price
+        
         }
         addItem(item, quantity)
     }
 
-    if (!product) return <GridLoader />
+    if (!id) return <GridLoader />
 
     return (
         <article className="CardItem">
             <header className="Header">
-                <h2 className="ItemHeader">{product.name}</h2>
+                <h2 className="ItemHeader">{name}</h2>
             </header>
             <picture>
-                <img src={product.img} alt={product.name} className="ItemImg" />
+                <img src={img} alt={name} className="ItemImg" />
             </picture>
             <section>
-                <p className="Info">Categoria: {product.category}</p>
-                <p className="Info">Descripcion: {product.description}</p>
-                <p className="Info">Precio: {product.price}</p>
+                <p className="Info">Categoria: {category}</p>
+                <p className="Info">Descripcion: {description}</p>
+                <p className="Info">Precio: ${price}</p>
             </section>
+
             <footer className="ItemFooter">
                 {
                     quantityAdded > 0 ? (
                         <Link to='/cart' className="Option">Terminar compra</Link>
                     ) : (
-                        <ItemCount stock={product.stock} initial={1} onAdd={handleOnAdd} />
+                        <ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />
                     )
                 }
             </footer>
