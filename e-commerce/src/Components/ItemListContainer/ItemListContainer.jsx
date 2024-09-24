@@ -5,7 +5,7 @@ import getProducts from "../asyncMock"
 import { useParams } from "react-router-dom"
 import {GridLoader} from "react-spinners"
 import ItemCount from "../ItemCount/ItemCount"
-/*import { getItems } from "../../Firebase/db"*/
+import {getItems} from "../../Firebase/db"
 
 
 function ItemListContainer () {
@@ -16,7 +16,7 @@ function ItemListContainer () {
     const {categoryId} = useParams()
 
     useEffect(() => {
-       const filterItems = (products) => {
+       /*const filterItems = (products) => {
             const filterProducts = products.filter((prod)  => prod.category.toLowerCase() === categoryId)
             setItems(filterProducts)
         }
@@ -27,14 +27,15 @@ function ItemListContainer () {
             filterItems(res)
             
         }
-        })
+        })*/
 
-       /*getItems(setItems)*/
+        getItems(setItems)
+
     }, [categoryId])
 
-    if(loading){
+    /*if(loading){
         return <GridLoader />
-    }
+    }*/
     return (
         <ItemList items={items}/>
         

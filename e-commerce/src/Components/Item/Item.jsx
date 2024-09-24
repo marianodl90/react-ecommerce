@@ -1,6 +1,5 @@
 
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from "react-router-dom"
 
 
@@ -32,5 +31,4 @@ const Item = ({ id, name, price, category, img, stock }) => {
 export default Item
 
 
-/*<ItemCount stock={stock} initial={1} onAdd={(quantity) => console.log("Cantidad agregada:", quantity)} />*/
 
