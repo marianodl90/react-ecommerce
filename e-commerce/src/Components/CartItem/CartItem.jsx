@@ -1,7 +1,7 @@
 
 
 
-const Item = ({ name, price, quantity,quantityAdded }) => {
+const Item = ({ name, price, quantity }) => {
 
     return (
         <article className="CardItem">
@@ -14,12 +14,14 @@ const Item = ({ name, price, quantity,quantityAdded }) => {
             <section>
                 <p className="Info">Precio: ${price}</p>
             </section>
-            <section>
-            <p className="Info">Subtotal: ${quantityAdded}</p>
-
-            </section>
         </article>
     )
 }
 
 export default Item
+
+/*
+<section>
+            <p className="Info">Subtotal: ${quantityAdded}</p>
+
+            </section>*/
