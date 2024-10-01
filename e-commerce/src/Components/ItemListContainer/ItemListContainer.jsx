@@ -1,10 +1,7 @@
 
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
-import getProducts from "../asyncMock"
 import { useParams } from "react-router-dom"
-import {GridLoader} from "react-spinners"
-import ItemCount from "../ItemCount/ItemCount"
 import {getItems} from "../../Firebase/db"
 
 
@@ -16,28 +13,84 @@ function ItemListContainer () {
     const {categoryId} = useParams()
 
     useEffect(() => {
-       /*const filterItems = (products) => {
+        const filterItems = (products) => {
+            return products.filter((prod) => prod.category.toLowerCase() === categoryId)
+        }
+
+        getItems().then(res => {
+            if (!categoryId) {
+                setItems(res)
+            } else {
+                setItems(filterItems(res))
+            }
+            setLoading(false)
+        })
+
+    }, [categoryId])
+
+    if (loading) {
+        return <div>Loading...</div>
+    }
+
+    return (
+        <ItemList items={items} />
+    )
+}
+
+export default ItemListContainer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    useEffect(() => {
+        
+  
+       const filterItems = (products) => {
             const filterProducts = products.filter((prod)  => prod.category.toLowerCase() === categoryId)
             setItems(filterProducts)
         }
-        getProducts().then(res => {
+        getItems(setItems)(res => {
            if(!categoryId){setItems(res)
             setLoading(false)
+            
         } else{
             filterItems(res)
             
         }
-        })*/
+        })
 
-        getItems(setItems)
-
+       /* getItems(setItems)*/
+/*
     }, [categoryId])
 
-    /*if(loading){
-        return <GridLoader />
-    }*/
+    
     return (
-        <ItemList items={items}/>
+        <ItemList items={filterItems}/>
         
     )
 
@@ -47,7 +100,7 @@ function ItemListContainer () {
 export default ItemListContainer
 
 
-
+*/
 
 
 

@@ -1,5 +1,5 @@
 
-
+/*
 const productos = [
   {
     id: 1,
@@ -105,8 +105,8 @@ const getProducts = () => {
 }
 
 export default getProducts
-
-
+*/
+/*
 export const getProductById = (productId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -123,3 +123,4 @@ export const getProductsByCategory = (catid) => {
     }, 0)
   })
 }
+*/
