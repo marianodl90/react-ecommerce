@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import {getItems} from "../../Firebase/db"
+import { GridLoader } from "react-spinners"
 
 
 function ItemListContainer () {
@@ -29,7 +30,7 @@ function ItemListContainer () {
     }, [categoryId])
 
     if (loading) {
-        return <div>Loading...</div>
+        return <GridLoader />
     }
 
     return (

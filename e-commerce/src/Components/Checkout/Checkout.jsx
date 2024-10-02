@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react'
 import { serverTimestamp } from "firebase/firestore"
 import { useCartContext } from "../../Context/CartContext"
@@ -8,6 +10,7 @@ const Checkout = () => {
     const { cart, total } = useCartContext()
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [orderId, setOrderId] = useState(null)
+    const { clearCart } = useCartContext()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -25,6 +28,7 @@ const Checkout = () => {
 
         const id = await createOrder(order)
         setOrderId(id)
+        clearCart()
         setIsModalOpen(true)
     }
 
@@ -32,6 +36,7 @@ const Checkout = () => {
         setIsModalOpen(false)
         setOrderId(null)
     }
+
 
     return (
         <div>

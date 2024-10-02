@@ -50,24 +50,3 @@ export const CartProvider = ({ children }) => {
         </CartContext.Provider>
     )
 }
-
-// clase 7 ejemplo del profe 
-
-/*import { createContext, useContext } from "react"
-
-export const CartContext = createContext([])
-
-export const useCartContext = () => useContext(CartContext)
-
-*/
-
-
-/*
-export const CartContext = createContext({
-    cart: [],
-    total: 0,
-    totalQuantity: 0
-
-})
-
-*/
