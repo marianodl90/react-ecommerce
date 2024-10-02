@@ -1,4 +1,4 @@
-import './CartWidgets.css'
+import "./CartWidgets.css"
 import { useContext } from 'react'
 import carrito from "../../assets/carrito.png"
 import { CartContext } from "../../Context/CartContext"
@@ -10,11 +10,12 @@ const CartWidgets = () => {
     const { totalQuantity } = useContext(CartContext)
 
     return (
-
+        <div className='cwContainer'>
         <Link to='/cart' className="CartWidget" style={{ display: totalQuantity > 0 ? 'block' : 'none' }}>
             <img className='CartImg' src={carrito} alt='cart-widget' />
             {totalQuantity}
         </Link>
+        </div>
     )
 }
 

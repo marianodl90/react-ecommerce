@@ -1,9 +1,6 @@
-#carrito {
-    display: flex;
-    justify-content: end;
-}
-#carrito img {
-    
-    width: 50px;
-    height: 50px;
+
+
+.CartImg{
+    width: 75px !important;
+    height: 75px !important;
 }

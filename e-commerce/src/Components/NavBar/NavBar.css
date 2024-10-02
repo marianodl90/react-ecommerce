@@ -1,10 +1,9 @@
 .container {
-    width: 1400px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: lightyellow;
-    padding: 20px;
+    background-color: lightgoldenrodyellow;
     border-radius: 20px;
 }
 
@@ -12,6 +11,7 @@
     width: 300px;
     height: 200px;
     border-radius: 10px;
+    margin: 5px;
 }
 .categories {
 width: 600px;

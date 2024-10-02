@@ -24,7 +24,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     if (!id) return <GridLoader />
 
     return (
-        <article className="CardItem">
+        <article className="CardItemD">
             <header className="Header">
                 <h2 className="ItemHeader">{name}</h2>
             </header>

@@ -4,4 +4,20 @@
     border-radius: 20px;
 }
 .CardItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.CardItem:hover  {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    
+}
+.ContainerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

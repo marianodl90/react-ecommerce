@@ -1,11 +1,10 @@
 .containerIL {
-    width: 1400px;
-    background-color: aliceblue;
+    width: 100%;
+    background-color: white;
     opacity: 1;
-    padding: 20px;
+    
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

@@ -1,5 +1,4 @@
-
-
+import "./Checkout.css"
 import { useState } from 'react'
 import { serverTimestamp } from "firebase/firestore"
 import { useCartContext } from "../../Context/CartContext"
@@ -39,16 +38,18 @@ const Checkout = () => {
 
 
     return (
-        <div>
+        <div className="CompraC">
             <h2>Resumen de la compra</h2>
             {cart.map(item => <form key={item.id}>{item.name} x {item.quantity}</form>)}
             <h2>Datos del Cliente</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" id="name" name="name" placeholder="Ingrese su nombre..." required />
-                <input type="phone" id="phone" name="phone" placeholder="Ingrese su telefono..." required />
-                <input type="email" id="email" name="email" placeholder="Ingrese su correo..." required />
-                <button type="submit" id="submit">Finalizar compra</button>
+           <div>
+            <form onSubmit={handleSubmit} className='FormContainer'>
+                <input className="input" type="text" id="name" name="name" placeholder="Ingrese su nombre..." required />
+                <input className="input" type="phone" id="phone" name="phone" placeholder="Ingrese su telefono..." required />
+                <input className="input" type="email" id="email" name="email" placeholder="Ingrese su correo..." required />
+                <button className="input" type="submit" id="submit">Finalizar compra</button>
             </form>
+            </div>
 
             <Modal isOpen={isModalOpen} onClose={closeModal} orderId={orderId} />
         </div>
