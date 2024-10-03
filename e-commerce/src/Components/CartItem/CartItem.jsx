@@ -20,8 +20,3 @@ const Item = ({ name, price, quantity }) => {
 
 export default Item
 
-/*
-<section>
-            <p className="Info">Subtotal: ${quantityAdded}</p>
-
-            </section>*/
