@@ -1,15 +1,26 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# La Providencia - E-commerce de Artículos Religiosos
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**La Providencia** es una tienda en línea dedicada a la venta de artículos religiosos. Este proyecto se desarrolla utilizando **[React](https://reactjs.org/)** como frontend y **[Firebase](https://firebase.google.com/)** como base de datos, ofreciendo una experiencia de compra intuitiva y fácil de usar.
 
+## Funcionalidades
 
-PROFE, HiCE NUEVAMENTE EL PROYECTO EN VITE COMO LO HABIA SOLICITADO. DISCULPE, NO ME HABIA DADO CUENTA DE ESO. TRABAJE SOBRE LOS ESTILOS, Y EN CUANTO AL SEGUNDO ENTREGABLE NO HE PODIDO RESOLVER UN PROBLEMA QUE ESPERO PUEDA AYDARME.
+- **Listado de Productos**: Los usuarios pueden ver todos los productos disponibles en la tienda.
+- **Categorías de Productos**: Los productos se organizan en diferentes categorías para facilitar la navegación.
+- **Detalle de Producto**: Cada producto tiene su propia página con detalles, imágenes y opciones de compra.
+- **Carrito de Compras**: Los usuarios pueden agregar productos a su carrito para gestionar sus compras antes de proceder al pago.
+- **Generación de Órdenes de Compra**: Los usuarios pueden finalizar su compra y generar una orden, la cual se almacena en la base de datos de Firebase.
 
-NO PUDE NAVEGAR POR LAS DISTINTAS CATEGORIAS. NO SE DONDE ESTA EL ERROR, REVISE LA FUNCION DE FILTRADO EN EL ITEMLISTCONTAINER PERO NO LOGRE ENCONTRAR EL ERROR DESPUES DE VARIAS HORAS.
+## Tecnologías Utilizadas
 
-ESPERO PUEDA AYUDARME A CORREGIRLO. ESPERO SU DEVOLUCION Y QUE TENGA EXCELENTE SEMANA!!!
+- **Frontend**: [React](https://reactjs.org/)
+- **Backend**: [Firebase](https://firebase.google.com/)
+- **Base de Datos**: Firestore (Firebase)
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/la-providencia.git
