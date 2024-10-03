@@ -1,3 +1,13 @@
 .CardItemD {
+    background-color: white;
+    width: 1315px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.CardItemD:hover {
     background-color: whitesmoke;
 }

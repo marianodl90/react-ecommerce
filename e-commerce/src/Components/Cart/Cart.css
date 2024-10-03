@@ -1,0 +1,19 @@
+.CartContainerC{
+    background-color: white;
+    width: 1315px;
+    margin-top: 20px;
+}
+.CartContainerC:hover{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    
+}
+.NoProducts{
+    background-color: white;
+    width: 1315px;
+    border-radius: 20px;
+
+}
+.NoProducts:hover{
+    background-color: whitesmoke;
+}
