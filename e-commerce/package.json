@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "firebase": "^10.13.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^22.14.0",
+    "react-dom": "^22.14.0",
     "react-router-dom": "^6.26.1",
     "react-spinners": "^0.14.1"
   },
@@ -26,6 +26,6 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "vite": "^5.4.1"
+    "vite": "^6.0.0"
   }
 }
